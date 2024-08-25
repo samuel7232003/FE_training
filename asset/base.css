@@ -1,0 +1,33 @@
+:root{
+    --color-one:hwb(208 18% 15%);
+    --color-two:#b8d9ee;
+    --color-three:#6fcef470;
+    --color-four:#b3d6f082;
+}
+
+*{
+    margin: 0%;
+    padding: 0;
+}
+ h2{
+    color: hsl(238, 24%, 43%);
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+main>:nth-child(even){
+    background-color: var(--color-three);
+}
+main>:nth-child(odd){
+       background-color:var(--color-four);
+}
+
+section,footer{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+figure img{
+    width: 100%;
+    height: 100%;
+}
