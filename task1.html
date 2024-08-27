@@ -5,6 +5,8 @@
         <title>task1</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="imagesges/icon.png" type="imagesge/x-icon">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -12,29 +14,29 @@
             <nav class="menu">
                 <!-- Trong thẻ nav, cần có thẻ ul -> li -> a -> p -->
                 <ul>
-                    <li style="display: inline-block;">
+                    <li>
                         <a href="#"><p>menu1</p></a>
                     </li>
 
-                    <li style="display: inline-block;">
+                    <li>
                         <a href="#"><p>menu2</p></a>
                     </li>
 
-                    <li style="display: inline-block;">
+                    <li>
                         <a href="#"><p>menu3</p></a>
                     </li>
 
-                    <li style="display: inline-block;">
+                    <li>
                         <a href="#"><p>menu4</p></a>
                     </li>
 
-                    <li style="display: inline-block;">
+                    <li>
                         <a href="#"><p>menu5</p></a>
                     </li>
                 </ul>
             </nav>
         </header>
-
+        
         <main>
             <!-- Start section about -->
             <section class="section-about">
@@ -43,40 +45,46 @@
                     <li>
                         <a href="#">
                             <!-- Các thẻ img cần đặt trong thẻ figure, sau đó để chú thích bằng thẻ p -->
-                            <figure style="display: inline-block;">
-                                <img src="data_task1/hoahuongduong.jfif" alt="hoa hướng dương" style="width: 210px; height: 120px;"></img>
+                            <figure>
+                                <img src="images/hoahuongduong.jfif" alt="hoa hướng dương"></img>
                             </figure>
-                            <p>Hoa Hướng Dương</p>
+                            <p class="title">Hoa Hướng Dương</p>
+                            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis, laborum similique.</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <figure style="display: inline-block;">
-                                <img src="data_task1/hoacamtucau.jpg" alt="hoa cẩm tú cầu" style="width: 210px; height: 120px;"></img>
+                            <figure>
+                                <img src="images/hoacamtucau.jpg" alt="hoa cẩm tú cầu"></img>
                             </figure>
-                            <p>Hoa Cẩm Tú Cầu</p>
+                            <p class="title">Hoa Cẩm Tú Cầu</p>
+                            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis, laborum similique.</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <figure style="display: inline-block;">
-                                <img src="data_task1/hoalanchuong.jpg" alt="hoa lan chuông" style="width: 210px; height: 120px;"></img>
+                            <figure>
+                                <img src="images/hoalanchuong.jpg" alt="hoa lan chuông"></img>
                             </figure>
-                            <p>Hoa Lan Chuông</p>
+                            <p class="title">Hoa Lan Chuông</p>
+                            <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis, laborum similique.</p>
                         </a>
                     </li>
                 </ul>
             </section>
             <!-- End section about -->
-             
+
             <!-- Start section SNS -->
             <section class="section-SNS">
                 <h2>Heading title</h2>
-                <div>
-                    <figure style="display: flex; gap: 10px;">
-                        <img src="data_task1/hoaoaihuong.webp" alt="hoa oải hương" style="width: 300px; height: 200px;"></img>
+                <div class="layout">
+                    <figure>
+                        <img src="images/hoaoaihuong.webp" alt="hoa oải hương"></img>
                     </figure>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt non porro atque, cumque error libero blanditiis veritatis! Laboriosam quos eos suscipit et, minus possimus, pariatur harum accusantium repudiandae voluptas sit?</p>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt non porro atque, cumque error libero blanditiis veritatis! Laboriosam quos eos suscipit et, minus possimus, pariatur harum accusantium repudiandae voluptas sit?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae minus, dolores deleniti, magnam tenetur cum tempore nam ab natus enim magni delectus molestiae voluptatum eius ipsum ducimus nihil! Explicabo, dolorem?</p>
+                    </div>
                 </div>
             </section>
             <!-- End section SNS -->
@@ -93,9 +101,7 @@
                         <legend>Email:</legend>
                         <input type="text" placeholder="Nhập email của bạn"></input>
                     </fieldset>
-                    <div>
-                        <button>Gửi</button>
-                    </div>
+                    <button>Gửi</button>
                 </form>
             </section>
             <!-- End section Feedback -->
@@ -103,8 +109,8 @@
 
         <footer>
             <div>
-                <figure style="display: flex; gap: 10px;">
-                    <img src="data_task1/flower-logo.webp" alt="logo" style="width: 180px; height: 180px;"></img>
+                <figure>
+                    <img src="images/flower-logo.webp" alt="logo"></img>
                 </figure>
                 <address>
                     <h3>Address title</h3>
