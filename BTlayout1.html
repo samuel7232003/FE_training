@@ -5,55 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        main {
+            cursor: grab;
+        }
+
+        /*Setup text*/
+        body p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /*Ảnh*/
         .article {
             display:inline-block;
-            width: 32%;
+            width: 32%; /* Max 3 ảnh 1 dòng*/
         }
+
         .article img {
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;    
         }
-        #navi {
+
+        /*setup nav*/
+        nav {
+            margin-top: 30px;
             display: inline-block;
-            width: 16.66%;
             height: 15%;
-            background-color: lightcoral ;
             text-align: center;
-            border: 2px dotted;
             overflow: hidden;
         }
 
+        nav ul {
+            list-style: none;
+        } 
+
+        /* làm search bar */
+        #search-bar::placeholder {
+            color: gray;
+        }
+
+        #search-bar input{
+            background: #ecf0f3;
+            padding: 10px;
+            padding-left: 20px;
+            height: 25px;
+            font-size: 14px;
+            border-radius: 50px;
+            box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+        }   
+
+        /* CSS và hiệu ứng khi hover trên nav*/
+        #menu {
+            display: flex
+        }
+
+        ul#menu a {
+            display: inline-block;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            position: relative;
+        }
+
+        ul#menu li{
+            padding: 0px 15px;
+        }
+
+        ul#menu a ::after {
+            content: "";
+            height: 5px;
+            width: 0;
+            background-color: cornflowerblue;
+            position: absolute;
+            bottom: -4px;
+            left: 0%;
+            transition: all 0.5s ease-in-out;
+        }
+
+        ul#menu a:hover ::after {
+            width: 50%;
+            transform: translateX(100%);
+        }
+
+        /* Burger icon */
+        .burger-icon {
+            display: none;
+        }
+
+        /* Media query for medium screens */
+        @media screen and (max-width: 750px) {
+        .burger-icon {
+            display: block;
+            margin-top: 30px;
+        }
+
+        nav {
+            display: none;
+        }
+
+        /* Chưa làm burger drop down nav */
+        .burger-icon.clicked {
+        }
+        }
     </style>
 </head>
 <body>
     <header>
+        <!-- Burger icon -->
+        <div class="burger-icon">
+            &#9776
+        </div>
         <nav>
-            <ul>
+            <ul id="menu">
                 <li id="navi">
                     <a href="">
-                        <p>Menu1</p>
+                        <p>Trang chủ&#9660;</p>
                     </a>
                 </li>
                 <li id="navi">
                     <a href="">
-                        <p>Menu2</p>
+                        <p>Giới thiệu&#9660;</p>
                     </a>
                 </li>
                 <li id="navi">
                     <a href="">
-                        <p>Menu3</p>
+                        <p>Diễn đàn&#9660;</p>
                     </a>
                 </li>
-                <li id="navi">
-                    <a href="">
-                        <p>Menu4</p>
-                    </a>
-                </li>
-                <li id="navi">
-                    <a href="">
-                        <p>Menu5</p>
-                    </a>
+                <li id="search-bar">
+                    <form action="" style="border: none;">
+                        <fieldset style="border: none;">
+                            <input type="text" placeholder="Search...">
+                        </fieldset>
+                    </form>
                 </li>
             </ul>
         </nav>
@@ -61,7 +150,7 @@
     <main>
         <section>
             <h2>Bộ 3 siêu đỉnk</h2>
-            <ul>
+            <ul id="img-list">
                 <li class="article">
                     <a href=""><img src="img/heh.jpg" alt="img1.jpeg" srcset=""></a>
                     <p>Thiên Phú</p>
