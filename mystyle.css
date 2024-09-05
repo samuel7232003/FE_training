@@ -87,6 +87,7 @@ main .first img {
 
 /* về xem */
 main .column p {
+    display: -webkit-box;
     margin: 0; 
     text-align: justify; 
     line-height: 1.5; 
