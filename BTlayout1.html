@@ -13,10 +13,15 @@
         }
 
         /*Setup text*/
-        body p {
+        p :not(.exception) {
             overflow: hidden;
-            text-overflow: ellipsis;
-        }
+            text-overflow: ellipsis; 
+            white-space:nowrap;
+        } 
+        /* không ăn css là do sử dụng độ dài % hoặc flexbox thì phải, đủ 3 hiệu ứng trên + độ dài px thì ăn*/
+        /*
+        note: tham khảo thêm https://stackoverflow.com/questions/17779293/css-text-overflow-ellipsis-not-working
+        */
 
         /*Ảnh*/
         .article {
@@ -122,17 +127,17 @@
         </div>
         <nav>
             <ul id="menu">
-                <li id="navi">
+                <li>
                     <a href="">
                         <p>Trang chủ&#9660;</p>
                     </a>
                 </li>
-                <li id="navi">
+                <li>
                     <a href="">
                         <p>Giới thiệu&#9660;</p>
                     </a>
                 </li>
-                <li id="navi">
+                <li>
                     <a href="">
                         <p>Diễn đàn&#9660;</p>
                     </a>
@@ -160,7 +165,7 @@
                     <p>Đỗ Thắng</p>
                 </li>
                 <li class="article">
-                    <a href=""><img src="img/heh.jpg" alt="img1.jpeg" srcset=""></a>
+                    <a href=""><img src="img/455828318_4153067858253156_6018461650853130823_n.jpg" alt="img1.jpeg" srcset=""></a>
                     <p>Hồng Trang</p>
                 </li>
             </ul>
@@ -170,7 +175,7 @@
             <figure class="article" style="width: 40%;">
                 <img src="img/1327236.jpeg" alt="ảnh skin">
             </figure>
-            <p style="width: 40%; display: inline-block;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nobis dignissimos architecto iure quasi ab expedita, perferendis sint amet, minus ipsum magni cupiditate, dolore commodi explicabo vero. Debitis, iure provident.</p>
+            <p id="exception" style="width: 40%; display: inline-block;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde nobis dignissimos architecto iure quasi ab expedita, perferendis sint amet, minus ipsum magni cupiditate, dolore commodi explicabo vero. Debitis, iure provident.</p>
         </section>
         <section>
             <h2>Something</h2>
